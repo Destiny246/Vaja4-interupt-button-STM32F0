@@ -182,7 +182,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	UNUSED(GPIO_Pin);
 	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
-	for(uint32_t i=0; i<10000; i++);
+	for(uint32_t i=0; i<10000; i++){
+		HAL_Delay(100);
+	}
 }
 
 /* USER CODE END 4 */
